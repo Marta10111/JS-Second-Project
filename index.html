@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A horror characters based game to train your memory. ">
+    <meta name="keywords" content="memory game, memory, game, horror game, challenge">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Devil's Seeds</title>
+</head>
+
+<body>
+
+    <!--Header-->
+    <header>
+        <h1>DEVIL'S SEEDS</h1>
+        <P>Hello Stranger let The Game Begin.
+            <br> To win and survive click a card to reveal famous horror movie character,
+            can you find his evil tween before he gets you?
+        </P>
+    </header>
+    <div id="game-container">
+        <!--Empty Div for cards in JS-->
+        <div class="cards">
+        </div>
+        <!--Images for card elements-->
+        <div>
+            <img class="hidden image" src="assets/images/Chucky.jpg" alt="a photo of Chucky with a knife ">
+            <img class="hidden image" src="assets/images/Chucky.jpg" alt="a photo of Chucky with a knife ">
+            <img class="hidden image" src="assets/images/freddy.jpg" alt="a photo of Freddy Krueger">
+            <img class="hidden image" src="assets/images/freddy.jpg" alt="a photo of Freddy Krueger">
+            <img class="hidden image" src="assets/images/Hannibal.jpg" alt="a photo of Hannibal Lecter">
+            <img class="hidden image" src="assets/images/Hannibal.jpg" alt="a photo of Hannibal Lecter">
+            <img class="hidden image" src="assets/images/Jason.jpg" alt="a photo of Jason Voorhees">
+            <img class="hidden image" src="assets/images/Jason.jpg" alt="a photo of Jason Voorhees">
+            <img class="hidden image" src="assets/images/Michael.jpg" alt="a photo of Michael Myers">
+            <img class="hidden image" src="assets/images/Michael.jpg" alt="a photo of Michael Myers">
+            <img class="hidden image" src="assets/images/Norman.jpg" alt="a photo of Norman Bates">
+            <img class="hidden image" src="assets/images/Norman.jpg" alt="a photo of Norman Bates">
+            <img class="hidden image" src="assets/images/Pennywise.jpg" alt="a photo of Pennywise">
+            <img class="hidden image" src="assets/images/Pennywise.jpg" alt="a photo of Pennywise">
+            <img class="hidden image" src="assets/images/Misery.jpg" alt="a photo of Kathy Bates">
+            <img class="hidden image" src="assets/images/Misery.jpg" alt="a photo of Kathy Bates">
+            <img class="hidden image" src="assets/images/TheShining.jpg" alt="a photo of Jack Nicholson">
+            <img class="hidden image" src="assets/images/TheShining.jpg" alt="a photo of Jack Nicholson">
+        </div>
+        <!--Hidden modules-->
+        <div class="mod hidden">
+            <div class="mod-content">
+                <div class="mod-text">
+                </div>
+                <!--Button to let the user play another game without reloading the page-->
+                <button aria-label="Click this button to play again.">
+                    You survive!
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Scores section-->
+    <div class="score">
+        <p class="move-count">Moves: <span id="moves">0</span></p>
+        <p class="record-count">Record: <span id="record">0</span></p>
+        <button aria-label="Click this button to play a new game.">
+            Let's play a game!
+        </button>
+    </div>
+    <!--Script link-->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
