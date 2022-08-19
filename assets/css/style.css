@@ -6,3 +6,108 @@
     padding: 0;
     border: 0;
 }
+
+/*General*/
+html {
+    background: url("../images/background-with-blood.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+body {
+    margin: 2vw;
+    font-family: Aclonica, sans-serif;
+    letter-spacing: 0, 1.5rem;
+}
+
+/*Header*/
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4vw;
+    color: #800000;
+    font-family: Creepster, sans-serif;
+}
+
+p,
+button {
+    font-size: 1.5vw;
+    font-family: Aclonica, sans-serif;
+    color: black;
+}
+
+/*Cards*/
+.cards {
+    column-count: 6;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
+
+.closed {
+    filter: brightness(0);
+}
+
+.closed:hover {
+    transform: scale(1.04);
+}
+
+.paired {
+    filter: grayscale(100);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Score */
+.score {
+    text-align: center;
+}
+
+.score button {
+    margin: 1%;
+}
+
+.move-count {
+    display: inline;
+    padding: 0.5rem 1rem;
+}
+
+.record-count {
+    display: inline;
+    padding: 0.5rem 1rem;
+}
+
+#moves,
+#record {
+    font-size: 2vw;
+    color: rgb(114, 23, 23);
+}
+
+button {
+    border: 2px #800000;
+    border-radius: 8%;
+    background-color: #800000;
+    padding: 1%;
+    margin-top: 2%;
+    color: antiquewhite;
+}
+
+button:hover {
+    transform: scale(1.04);
+    border: 2px rgb(255, 0, 0);
+    padding: 1%;
+    border-radius: 8%;
+    background-color: rgb(255, 0, 0);
+    padding: 1%;
+    margin-top: 2%;
+    color: black;
+}
