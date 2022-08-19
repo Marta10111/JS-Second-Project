@@ -66,6 +66,27 @@ function openCard(turnedCards, card) {
         }, 500);    
     }
 };
+function checkPair(turnedCards) {
+    
+    let source1 = turnedCards[0].getAttribute("src");
+    let source2 = turnedCards[1].getAttribute("src");
+    
+    if (source1 === source2) {
+
+        turnedCards[0].className = "card paired";
+        turnedCards[1].className = "card paired";
+        setTimeout( function() {
+            winGame()
+            }, 500);
+        
+    } else {
+
+        turnedCards[0].className = "card closed";
+        turnedCards[1].className = "card closed";
+        turnedCards[0].addEventListener("click", open, true);
+        turnedCards[1].addEventListener("click", open, true);
+    };
+};
 
 function addMove() {
 
@@ -76,8 +97,20 @@ function addMove() {
 function addPair() {
 }
 function winGame() {
-
+    let paired = document.getElementsByClassName("card paired");
+    if (paired.length === 20) {
+        alert("You won!");
+        recordCount();
+    };
 };
 
 function recordCount() {
+    let moves = parseInt(document.getElementById("moves").innerText);
+    let oldRecord = parseInt(document.getElementById("record").innerText);
+
+    if (moves < oldRecord) {
+        document.getElementById("record").innerText = moves;
+    } else if (oldRecord === 0) {
+        document.getElementById("record").innerText = moves;
+    };
 };
