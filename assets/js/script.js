@@ -1,109 +1,184 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementsByTagName("button")
-    button[0].addEventListener("click", function() {
-        startGame();
-    });
     startGame();
 });
 
-  //Create game area with shuffled cards//
- 
+// Declair global variables//
+let buttons = document.getElementsByTagName("button");
+if (buttons.length !== 2) {
+    alert(`Invalid number of buttons`);
+    throw `Invalid number of buttons. Aborting!`;
+}
+let modal = document.getElementsByClassName("mod hidden")[0];
+let div = document.getElementsByClassName("mod-text")[0];
+let turnedCards = [];
+let open = function(e) {
+    openCard(turnedCards, e.currentTarget);
+};
+
+//Create game area with cards//
 function startGame() {
+   
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            modal.className = "mod hidden";
+            startGame();
+        });
+    }
+    //Reset the counter//
+    document.getElementById("moves").innerText = 0;
+    let oldCards = document.getElementsByClassName("card");
+    while (oldCards.length > 0) {
+        oldCards[0].remove();
+    }
+    
     //Create an array of 20 random numbers//
-    let arrayRandom = []
-    while (arrayRandom.length < 20) {
-        let number = Math.floor(Math.random()*20);
+    let arrayRandom = [];
+    while (arrayRandom.length < 18) {
+        let number = Math.floor(Math.random()*18);
         if (arrayRandom.includes(number) === false) {
             arrayRandom.push(number);
         }
     }
-    
-    //Create an array of the hidden images in random order//
-    let cards = document.getElementsByClassName("hidden");
-    let shuffledCards = []
-    for(let i = 0; i < 20; i++) {
-        shuffledCards.push(cards[arrayRandom[i]])
+    //Use ArrayRandom and create an array of the hidden images in random order.
+    let cards = document.getElementsByClassName("hidden image");
+    if (cards.length !== 18) {
+        alert(`Invalid number`);
+        throw `Invalid number. Aborting!`;
     }
-    
-    //Create html of the cards and push to the html document//
-    for (let i = 0; i < shuffledCards.length; i++) {
-        let source = shuffledCards[i].getAttribute("src");
+    let shuffledCards = [];
+    for(let i = 0; i < 18; i++) {
+        shuffledCards.push(cards[arrayRandom[i]]);
+    }
+    //Create html code of the cards//
+    for (let shuffledCard of shuffledCards) {
+        let source = shuffledCard.getAttribute("src");
+        let alt = shuffledCard.getAttribute("alt");
         let img = document.createElement("img");
         img.setAttribute("src", source);
+        img.setAttribute("alt", alt);
         img.className = "card closed";
-        let cardDiv = document.getElementsByClassName('cards')
+        let cardDiv = document.getElementsByClassName('cards');
         cardDiv[0].appendChild(img);
-    };
-    cards = document.getElementsByClassName("closed");
-    let turnedCards = [];
-    for (let card of cards) {
-        card.addEventListener("click", function() {
-            openCard(turnedCards, card);
-        }, true);
     }
-};
+    
+    cards = document.getElementsByClassName("closed");
+    for (let card of cards) {
+        card.addEventListener("click", open, true);
+    }
+}
 
- 
+
  //Call checkPair function when 2 cards are clicked//
  
 function openCard(turnedCards, card) {
-    console.log(card.classList)
-    //console.log(card.classList)
     card.classList.remove("closed");
-    console.log(card.classList)
-    //console.log(card.classList)
-    card.removeEventListener("click", function() {
-        openCard(turnedCards, card);
-    }, true);
+    card.removeEventListener("click", open, true);
     turnedCards.push(card);
-    console.log(turnedCards)
-    //console.log(turnedCards)
+
     if (turnedCards.length === 2) {
+        
+        let cards = document.getElementsByClassName("card closed");
+        for (let card of cards) {
+            card.removeEventListener("click", open, true);
+        }
         setTimeout( function() {
             checkPair(turnedCards);
-            turnedCards.splice(0, 2);
+            turnedCards.length = 0;
             addMove();
-        }, 500);    
+        }, 650);    
+    } else if (turnedCards.length > 2) {
+        alert(`To many cards open`);
+        throw `To many cards open. Aborting!`;
     }
-};
+}
+
+/**
+ * Check if the two cards clicked are matching.
+ * If they are, change color and keep open.
+ * If not, turn back and add eventlisteners again.
+ */
 function checkPair(turnedCards) {
-    
     let source1 = turnedCards[0].getAttribute("src");
     let source2 = turnedCards[1].getAttribute("src");
     
     if (source1 === source2) {
-
         turnedCards[0].className = "card paired";
         turnedCards[1].className = "card paired";
+        let cards = document.getElementsByClassName("card closed");
+        for (let card of cards) {
+            card.addEventListener("click", open, true);
+        }
         setTimeout( function() {
-            winGame()
-            }, 500);
-        
+            winGame();
+            }, 500);   
     } else {
-
         turnedCards[0].className = "card closed";
         turnedCards[1].className = "card closed";
-        turnedCards[0].addEventListener("click", open, true);
-        turnedCards[1].addEventListener("click", open, true);
-    };
-};
+        let cards = document.getElementsByClassName("card closed");
+        for (let card of cards) {
+            card.addEventListener("click", open, true);
+        }
+    }
+}
 
+
+ //Show number of moves//
+ 
 function addMove() {
-
     let moves = parseInt(document.getElementById("moves").innerText);
     document.getElementById("moves").innerText = ++moves;
-};
-
-function addPair() {
 }
+
+
+//Calculate if all pairs are found and post an alertmessage if they are//
+ 
 function winGame() {
     let paired = document.getElementsByClassName("card paired");
-    if (paired.length === 20) {
-        alert("You won!");
-        recordCount();
-    };
-};
+    if (paired.length === 18) {
+        let moves = parseInt(document.getElementById("moves").innerText);
+        let oldRecord = parseInt(document.getElementById("record").innerText);
+        
+        //Empty the content of the modal to make room for new content.
+        while (div.children.length > 0) {
+            div.children[0].remove();
+        }
+        if (moves < oldRecord) {
+            modal.classList.remove("hidden");
+            let h1 = document.createElement("h1");
+            h1.innerText = "Impressing, thats a new best score!";
+            div.appendChild(h1);
+            let p = document.createElement("p");
+            p.innerText = `You found all evil tweens within ${moves} moves!`;
+            div.appendChild(p);
+            recordCount();
+        } else if (oldRecord === 0) {
+            modal.classList.remove("hidden");
+            let h1 = document.createElement("h1");
+            h1.innerText = "Good job!";
+            div.appendChild(h1);
+            let p = document.createElement("p");
+            p.innerText = `You found all evil tweens within ${moves} moves!`;
+            div.appendChild(p);
+            recordCount();
+        } else {
+            modal.classList.remove("hidden");
+            let h1 = document.createElement("h1");
+            h1.innerText = "Good job!";
+            div.appendChild(h1);
+            let p = document.createElement("p");
+            p.innerText = `You found all evil tweens within ${moves} moves!`;
+            div.appendChild(p);
+            recordCount();
+        }
+    } else if (paired.length > 18) {
+        alert(`Invalid number of paired cards`);
+        throw `Invalid number of paired cards. Aborting!`;
+    }
+}
 
+
+ //Show the lowest number of moves per game since the page loaded//
+ 
 function recordCount() {
     let moves = parseInt(document.getElementById("moves").innerText);
     let oldRecord = parseInt(document.getElementById("record").innerText);
@@ -112,5 +187,5 @@ function recordCount() {
         document.getElementById("record").innerText = moves;
     } else if (oldRecord === 0) {
         document.getElementById("record").innerText = moves;
-    };
-};
+    }
+}
