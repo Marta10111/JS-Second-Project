@@ -144,27 +144,27 @@ function winGame() {
         }
         if (moves < oldRecord) {
             modal.classList.remove("hidden");
-            let h1 = document.createElement("h1");
-            h1.innerText = "Impressing, thats a new best score!";
-            div.appendChild(h1);
+            let h2 = document.createElement("h2");
+            h2.innerText = "Impressing, thats a new best score!";
+            div.appendChild(h2);
             let p = document.createElement("p");
             p.innerText = `You found all evil tweens within ${moves} moves!`;
             div.appendChild(p);
             recordCount();
         } else if (oldRecord === 0) {
             modal.classList.remove("hidden");
-            let h1 = document.createElement("h1");
-            h1.innerText = "Good job!";
-            div.appendChild(h1);
+            let h2 = document.createElement("h2");
+            h2.innerText = "Good job!";
+            div.appendChild(h2);
             let p = document.createElement("p");
             p.innerText = `You found all evil tweens within ${moves} moves!`;
             div.appendChild(p);
             recordCount();
         } else {
             modal.classList.remove("hidden");
-            let h1 = document.createElement("h1");
-            h1.innerText = "Good job!";
-            div.appendChild(h1);
+            let h1 = document.createElement("h2");
+            h2.innerText = "Good job!";
+            div.appendChild(h2);
             let p = document.createElement("p");
             p.innerText = `You found all evil tweens within ${moves} moves!`;
             div.appendChild(p);
