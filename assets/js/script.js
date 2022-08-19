@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     startGame();
 });
 
@@ -11,18 +11,18 @@ if (buttons.length !== 2) {
 let modal = document.getElementsByClassName("mod hidden")[0];
 let div = document.getElementsByClassName("mod-text")[0];
 let turnedCards = [];
-let open = function(e) {
+let open = function (e) {
     openCard(turnedCards, e.currentTarget);
 };
 
 //Create game area with cards//
 function startGame() {
-   
+
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-            modal.className = "mod hidden";
-            startGame();
-        });
+        button.addEventListener("click", function () {
+                modal.className = "mod hidden";
+                startGame();
+            });
     }
     //Reset the counter//
     document.getElementById("moves").innerText = 0;
@@ -30,11 +30,11 @@ function startGame() {
     while (oldCards.length > 0) {
         oldCards[0].remove();
     }
-    
+
     //Create an array of 20 random numbers//
     let arrayRandom = [];
     while (arrayRandom.length < 18) {
-        let number = Math.floor(Math.random()*18);
+        let number = Math.floor(Math.random() * 18);
         if (arrayRandom.includes(number) === false) {
             arrayRandom.push(number);
         }
@@ -46,7 +46,7 @@ function startGame() {
         throw `Invalid number. Aborting!`;
     }
     let shuffledCards = [];
-    for(let i = 0; i < 18; i++) {
+    for (let i = 0; i < 18; i++) {
         shuffledCards.push(cards[arrayRandom[i]]);
     }
     //Create html code of the cards//
@@ -60,7 +60,7 @@ function startGame() {
         let cardDiv = document.getElementsByClassName('cards');
         cardDiv[0].appendChild(img);
     }
-    
+
     cards = document.getElementsByClassName("closed");
     for (let card of cards) {
         card.addEventListener("click", open, true);
@@ -68,24 +68,23 @@ function startGame() {
 }
 
 
- //Call checkPair function when 2 cards are clicked//
- 
+//Call checkPair function when 2 cards are clicked//
 function openCard(turnedCards, card) {
     card.classList.remove("closed");
     card.removeEventListener("click", open, true);
     turnedCards.push(card);
 
     if (turnedCards.length === 2) {
-        
+
         let cards = document.getElementsByClassName("card closed");
         for (let card of cards) {
             card.removeEventListener("click", open, true);
         }
-        setTimeout( function() {
+        setTimeout(function () {
             checkPair(turnedCards);
             turnedCards.length = 0;
             addMove();
-        }, 650);    
+        }, 650);
     } else if (turnedCards.length > 2) {
         alert(`To many cards open`);
         throw `To many cards open. Aborting!`;
@@ -100,7 +99,7 @@ function openCard(turnedCards, card) {
 function checkPair(turnedCards) {
     let source1 = turnedCards[0].getAttribute("src");
     let source2 = turnedCards[1].getAttribute("src");
-    
+
     if (source1 === source2) {
         turnedCards[0].className = "card paired";
         turnedCards[1].className = "card paired";
@@ -108,9 +107,9 @@ function checkPair(turnedCards) {
         for (let card of cards) {
             card.addEventListener("click", open, true);
         }
-        setTimeout( function() {
+        setTimeout(function () {
             winGame();
-            }, 500);   
+        }, 500);
     } else {
         turnedCards[0].className = "card closed";
         turnedCards[1].className = "card closed";
@@ -122,23 +121,20 @@ function checkPair(turnedCards) {
 }
 
 
- //Show number of moves//
- 
+//Show number of moves//
 function addMove() {
     let moves = parseInt(document.getElementById("moves").innerText);
     document.getElementById("moves").innerText = ++moves;
 }
 
 
-//Calculate if all pairs are found and post an alertmessage if they are//
- 
+//Calculate if all pairs are found//
 function winGame() {
     let paired = document.getElementsByClassName("card paired");
     if (paired.length === 18) {
         let moves = parseInt(document.getElementById("moves").innerText);
         let oldRecord = parseInt(document.getElementById("record").innerText);
-        
-        //Empty the content of the modal to make room for new content.
+
         while (div.children.length > 0) {
             div.children[0].remove();
         }
@@ -162,7 +158,7 @@ function winGame() {
             recordCount();
         } else {
             modal.classList.remove("hidden");
-            let h1 = document.createElement("h2");
+            let h2 = document.createElement("h2");
             h2.innerText = "Good job!";
             div.appendChild(h2);
             let p = document.createElement("p");
@@ -177,8 +173,7 @@ function winGame() {
 }
 
 
- //Show the lowest number of moves per game since the page loaded//
- 
+//Show the lowest number of moves//
 function recordCount() {
     let moves = parseInt(document.getElementById("moves").innerText);
     let oldRecord = parseInt(document.getElementById("record").innerText);
