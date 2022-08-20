@@ -162,12 +162,8 @@ button:hover {
 /* Media queries */
 @media screen and (min-width: 900px) {
     .cards {
-        column-count: 5;
+        column-count: 6;
         text-align: center;
-    }
-
-    img {
-        width: 100px;
     }
 
     .card {
@@ -186,7 +182,7 @@ button:hover {
 
     #moves,
     #record {
-        font-size: 4vw;
+        font-size: 3vw;
     }
 }
 
