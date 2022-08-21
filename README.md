@@ -33,7 +33,7 @@
   - Page was tested on two browsers Chrome and Edge and in both cases intended apperance and responsiveness was achieved.
 ### Bugs
 - During running the Debug following issue was found:
-  - In all tree files: index.html, Css and script.js shows syntax error in first line even if there isn't any. Bug not fixed.
+  - In all three files: index.html, Css and script.js shows syntax error in first line even if there isn't any. Bug not fixed.
 ![Debbuging](https://user-images.githubusercontent.com/106401395/185798318-7579b8a6-4993-40d8-b16e-c3ccbbbd5cde.jpg)
 ### Lighthouse
 - Lighthouse report:
