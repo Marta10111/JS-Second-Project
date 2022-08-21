@@ -30,7 +30,7 @@
    - iPhone 12 Pro:
    ![iPhone12pro](https://user-images.githubusercontent.com/106401395/185796450-0d0d2a7c-7c44-4e92-9e24-3825042573f2.jpg)
 ### Browser compatibility
-  - Page was tested on two browsers Chrome and Edge and in both cases intended apperance and responsiveness was a achieved.
+  - Page was tested on two browsers Chrome and Edge and in both cases intended apperance and responsiveness was achieved.
 ### Bugs
 - During running the Debug following issue was found:
   - In all tree files: index.html, Css and script.js shows syntax error in first line even if there isn't any. Bug not fixed.
