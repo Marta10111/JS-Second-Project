@@ -21,23 +21,6 @@
 ![you-win](https://user-images.githubusercontent.com/106401395/185797651-19dce982-720f-4c5f-8812-18b0a3780b23.jpg)
 - If the number of moves is less then the current record, the user will be provided with information about the new achieve record. 
 ![best-score](https://user-images.githubusercontent.com/106401395/185797720-dc01f16f-8e83-4686-b213-bab1df8bfd72.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## **Testing**
 ### Responsiveness
   - These page was tested witch Chrome Developer Tools for a range of devices and I confirm that is responsive for most common screen sizes.
@@ -46,10 +29,20 @@
    ![iPadMini](https://user-images.githubusercontent.com/106401395/185796420-b54839c8-2fbb-430b-87e5-40d5b03f86f4.jpg)
    - iPhone 12 Pro:
    ![iPhone12pro](https://user-images.githubusercontent.com/106401395/185796450-0d0d2a7c-7c44-4e92-9e24-3825042573f2.jpg)
-
 ### Browser compatibility
   - Page was tested on two browsers Chrome and Edge and in both cases intended apperance and responsiveness was a achieved.
-  
-  ### Bugs
+### Bugs
+- During running the Debug following issue was found:
+  - In all tree files: index.html, Css and script.js shows syntax error in first line even if there isn't any.
+![Debbuging](https://user-images.githubusercontent.com/106401395/185798318-7579b8a6-4993-40d8-b16e-c3ccbbbd5cde.jpg)
+### Lighthouse
+- Lighthouse report:
+  - Issues with: Displays images with incorrect aspect ratio in Best Practice area
+![Lighthouse](https://user-images.githubusercontent.com/106401395/185798456-6cd141a8-10ed-427a-bd6e-2e4e8eef2d4d.jpg)
+### Code validation
+ - Validator response of CSS using [W3C CSS Validator] (https://jigsaw.w3.org/css-validator/)
+
+
+
 
 
