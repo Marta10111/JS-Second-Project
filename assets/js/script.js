@@ -31,7 +31,7 @@ function startGame() {
         oldCards[0].remove();
     }
 
-    //Create an array of 20 random numbers//
+    //Create an array of random numbers//
     let arrayRandom = [];
     while (arrayRandom.length < 18) {
         let number = Math.floor(Math.random() * 18);
@@ -39,7 +39,7 @@ function startGame() {
             arrayRandom.push(number);
         }
     }
-    //Use ArrayRandom and create an array of the hidden images in random order.
+    //Use ArrayRandom to create an array of the hidden images in random order.
     let cards = document.getElementsByClassName("hidden image");
     if (cards.length !== 18) {
         alert(`Invalid number`);
@@ -93,8 +93,8 @@ function openCard(turnedCards, card) {
 
 /**
  * Check if the two cards clicked are matching.
- * If they are, change color and keep open.
- * If not, turn back and add eventlisteners again.
+ * If yes, change color and keep open.
+ * If no, turn back and add eventlisteners again.
  */
 function checkPair(turnedCards) {
     let source1 = turnedCards[0].getAttribute("src");
