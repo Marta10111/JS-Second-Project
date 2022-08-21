@@ -12,6 +12,32 @@
 ![game-area](https://user-images.githubusercontent.com/106401395/185757012-ea678cbf-e1bd-47c4-8f85-095401e5e7b5.jpg)
 - When the user click a card it will show an image in colour, then he is expected to click another one. When two cards are shown it will stay coloured for a while. If they are the same image, they will get a grayscale filter and stay opened. If they don’t match, they will turn black again. After the cards turned back to black or got a grayscale filter, the game continues.
 ![game-played](https://user-images.githubusercontent.com/106401395/185757301-9cd67100-b935-448e-b7ff-1954f037bfc3.jpg)
+### Score area
+- Located at the bottom af the page. Every time the user has turned 2 cards it will count as a "move". The amount of moves you have made will be shown as "moves" and when you finish the game the "record" will show you the lowest amount of moves you have made to finish the game.
+- Also contain "Let's play a game button" to start a new game shuffling all cards and turns them upside down.
+![score-area](https://user-images.githubusercontent.com/106401395/185797367-447f8487-0c69-4df6-9d5b-adc507d7ea31.jpg)
+### Pop-up winning messages
+- When all pairs are found, pop-up message will appear. It's inform user that he win and how many moves through the game he made.
+![you-win](https://user-images.githubusercontent.com/106401395/185797651-19dce982-720f-4c5f-8812-18b0a3780b23.jpg)
+- If the number of moves is less then the current record, the user will be provided with information about the new achieve record. 
+![best-score](https://user-images.githubusercontent.com/106401395/185797720-dc01f16f-8e83-4686-b213-bab1df8bfd72.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## **Testing**
 ### Responsiveness
   - These page was tested witch Chrome Developer Tools for a range of devices and I confirm that is responsive for most common screen sizes.
