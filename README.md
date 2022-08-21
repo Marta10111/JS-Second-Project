@@ -56,6 +56,25 @@
   - Once the Master Branch has been selected, the page provided the link to the complite website.
 
 The link can be founde here: <a href="https://marta10111.github.io/JS-Second-Project/" rel="nofollow"> https://marta10111.github.io/JS-Second-Project/
+## **Content**
+ - I used fonts from [Google Fonts](https://fonts.google.com/) for these project.
+ -  Any code or problem solving issues was solved with the help of [Code Institute](https://learn.codeinstitute.net/login?next=/) and [w3school](https://www.w3schools.com/)
+  - For issue fixing i was using YouTube search on R3HAB MEDIA and Kevin Powell chanels.
+  - Feedback and comments from reviever of my PP1 were taken into account for these project, when running tests and commiting into GitHub. Per their suggestion I was trying to write some more specific comments messages.
+  -  Colleagues from Slack was also very helpfull, despite i didn't ask any question
+there, I finde a few felpfull topics and channells.
+ - I would also want to thank my mentor Martina, who have a huge amount of patience and knowledge she want to share.
+## **Media**
+- All images was from Google finds just for educational purposes:
+  - [Freddy Krueger](https://villains.fandom.com/wiki/Freddy_Krueger_(original))
+  - [Chucky](https://en.wikipedia.org/wiki/Chucky_%28character%29)
+  - [Norman Bates](https://halloweenhorrornights.fandom.com/wiki/Norman_Bates)
+  - [Annie Wilkes](https://www.whatsleepsbeneath.com/movieblog/women-in-horror-annie-wilkes)
+  - [Michael Myers](https://en.wikipedia.org/wiki/Michael_Myers_%28Halloween%29)
+  - [Jack Torrance](https://en.wikipedia.org/wiki/Jack_Torrance)
+  - [Hannibal Lecter](https://en.wikipedia.org/wiki/Hannibal_Lecter)
+  - [Jason Voorhees](https://en.wikipedia.org/wiki/Jason_Voorhees)
+- Instructions on how to upload images to README.md file was taken for educational purpose only from <a href="https://www.youtube.com/watch?v=nvPOUdz5PL4&t=146s&ab_channel=DanShahin>" rel="nofollow"> Specific YouTube Tutorial</a>
 
 
 
