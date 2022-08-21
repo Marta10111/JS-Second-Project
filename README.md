@@ -40,7 +40,22 @@
   - Issues with: Displays images with incorrect aspect ratio in Best Practice area
 ![Lighthouse](https://user-images.githubusercontent.com/106401395/185798456-6cd141a8-10ed-427a-bd6e-2e4e8eef2d4d.jpg)
 ### Code validation
- - Validator response of CSS using [W3C CSS Validator] (https://jigsaw.w3.org/css-validator/)
+ - Validator response of CSS using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+ ![W3C CSS checker](https://user-images.githubusercontent.com/106401395/185798746-7537d4f1-c0df-46eb-a3fc-8d22a7b6b98e.jpg)
+ 
+ - Validator response of HTML using [W3 Validator](https://validator.w3.org/)
+ ![W3C HTML checker](https://user-images.githubusercontent.com/106401395/185798873-8c481dd3-f403-4226-92a3-703e33c2b517.jpg)
+ 
+ - Validator response of JavaScript using [JSHint](https://jshint.com/)
+   - After first testing the following issue was found: "'let' is avaible in ES6 (use'esversion:6') or Mozilla JS extension" in several places. Problem was fixed with help of [R3HAB MEDIA profile on YouTube](https://www.bing.com/videos/search?q=let+is+available+in+es6&view=detail&mid=8FEDAD0E1A7AE3E9C8EA8FEDAD0E1A7AE3E9C8EA&FORM=VIRE). Picture shows validator after fixing issue.
+   ![JsHint](https://user-images.githubusercontent.com/106401395/185799293-4df47412-f361-48cf-bd94-96b0a8d57a81.jpg)
+## **Deployment**
+- The site was deployed to GitHub in following steps:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select Master Branch
+  - Once the Master Branch has been selected, the page provided the link to the complite website.
+
+The link can be founde here: <a href="https://marta10111.github.io/JS-Second-Project/" rel="nofollow"> https://marta10111.github.io/JS-Second-Project/
 
 
 
