@@ -4,6 +4,7 @@
 - First idea of a project created in  Balsamiq Wireframes:
 ![Balsamiq](https://user-images.githubusercontent.com/106401395/185756405-60494be9-9213-4fa5-98e7-04db082efc9d.jpg)
 ## **Features**
+
 ### Header
 - Gives user information about game name, short welcoming, game description and how to play to win.
 ![Header](https://user-images.githubusercontent.com/106401395/185756682-0f59d844-0e3f-4e87-9e36-bfd74e536517.jpg)
