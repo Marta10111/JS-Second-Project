@@ -57,6 +57,9 @@
 
 The link can be founde here: <a href="https://marta10111.github.io/JS-Second-Project/" rel="nofollow"> https://marta10111.github.io/JS-Second-Project/
 ## **Content**
+ - For idea how to start the project I use [Samuraj Programowania]((https://www.youtube.com/watch?v=gKUUHjEg7mQ&ab_channel=SamurajProgramowania)
+) channel on You tube
+
  - I used fonts from [Google Fonts](https://fonts.google.com/) for these project.
  -  Any code or problem solving issues was solved with the help of [Code Institute](https://learn.codeinstitute.net/login?next=/) and [w3school](https://www.w3schools.com/)
   - For issue fixing i was using YouTube search on R3HAB MEDIA and Kevin Powell chanels.
@@ -74,6 +77,8 @@ there, I finde a few felpfull topics and channells.
   - [Jack Torrance](https://en.wikipedia.org/wiki/Jack_Torrance)
   - [Hannibal Lecter](https://en.wikipedia.org/wiki/Hannibal_Lecter)
   - [Jason Voorhees](https://en.wikipedia.org/wiki/Jason_Voorhees)
+  - [Misery](https://www.looper.com/251702/the-untold-truth-of-misery/)
+  - [Bloody paper](https://depositphotos.com/108604478/stock-photo-old-paper-background-with-blood.html) background image
 - Instructions on how to upload images to README.md file was taken for educational purpose only from <a href="https://www.youtube.com/watch?v=nvPOUdz5PL4&t=146s&ab_channel=DanShahin>" rel="nofollow"> Specific YouTube Tutorial</a>
 
 
