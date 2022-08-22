@@ -1,5 +1,5 @@
 # Devil's Seeds
-- Devil's Seeds is a simple horror characters based memory game, to train your reflex and sharpener your mind.
+- Devil's Seeds is a simple horror characters based memory game, to train your reflex and sharpen your mind.
 ## **Wireframe**
 - First idea of a project created in  Balsamiq Wireframes:
 ![Balsamiq](https://user-images.githubusercontent.com/106401395/185756405-60494be9-9213-4fa5-98e7-04db082efc9d.jpg)
