@@ -58,7 +58,7 @@
 
 The link can be founde here: <a href="https://marta10111.github.io/JS-Second-Project/" rel="nofollow"> https://marta10111.github.io/JS-Second-Project/
 ## **Content**
- - For idea how to start the project I use [Samuraj Programowania]((https://www.youtube.com/watch?v=gKUUHjEg7mQ&ab_channel=SamurajProgramowania)
+ - For idea how to start the project I use [Samuraj Programowania](https://www.youtube.com/watch?v=gKUUHjEg7mQ&ab_channel=SamurajProgramowania)
  channel on You Tube
 
  - I used fonts from [Google Fonts](https://fonts.google.com/) for these project.
