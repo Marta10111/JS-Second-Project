@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     startGame();
 });
-const cards_number = 18
+const cards_number = 18;
 
 // Declair global variables//
 let buttons = document.getElementsByTagName("button");
