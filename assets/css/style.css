@@ -79,7 +79,7 @@ img {
 
 /* Modals */
 
-.mod {
+.popup {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -91,7 +91,7 @@ img {
     text-align: center;
 }
 
-.mod-text {
+.popup-text {
     background-color: rgba(151, 83, 83, 0.95);
     padding: 1%;
     border: 2px solid black;
@@ -99,7 +99,7 @@ img {
     border-radius: 10%;
 }
 
-.mod-content {
+.popup-content {
     margin: 14vw 5vw 0;
 }
 
@@ -139,7 +139,7 @@ button:hover {
     font-size: 2vw;
     color: rgb(114, 23, 23);
 }
-
+/*I have used button style from my first project and adapt it for my use*/
 button {
     border: 2px #800000;
     border-radius: 8%;

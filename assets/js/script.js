@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     startGame();
 });
+const cards_number = 18
 
 // Declair global variables//
 let buttons = document.getElementsByTagName("button");
@@ -8,8 +9,8 @@ if (buttons.length !== 2) {
     alert(`Invalid number of buttons`);
     throw `Invalid number of buttons. Aborting!`;
 }
-let modal = document.getElementsByClassName("mod hidden")[0];
-let div = document.getElementsByClassName("mod-text")[0];
+let modal = document.getElementsByClassName("popup hidden")[0];
+let div = document.getElementsByClassName("popup-text")[0];
 let turnedCards = [];
 let open = function (e) {
     openCard(turnedCards, e.currentTarget);
@@ -20,7 +21,7 @@ function startGame() {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-                modal.className = "mod hidden";
+                modal.className = "popup hidden";
                 startGame();
             });
     }
@@ -33,20 +34,20 @@ function startGame() {
 
     //Create an array of random numbers//
     let arrayRandom = [];
-    while (arrayRandom.length < 18) {
-        let number = Math.floor(Math.random() * 18);
+    while (arrayRandom.length < cards_number) {
+        let number = Math.floor(Math.random() * cards_number);
         if (arrayRandom.includes(number) === false) {
             arrayRandom.push(number);
         }
     }
     //Use ArrayRandom to create an array of the hidden images in random order.
     let cards = document.getElementsByClassName("hidden image");
-    if (cards.length !== 18) {
+    if (cards.length !== cards_number) {
         alert(`Invalid number`);
         throw `Invalid number. Aborting!`;
     }
     let shuffledCards = [];
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < cards_number; i++) {
         shuffledCards.push(cards[arrayRandom[i]]);
     }
     //Create html code of the cards//
@@ -131,7 +132,7 @@ function addMove() {
 //Calculate if all pairs are found//
 function winGame() {
     let paired = document.getElementsByClassName("card paired");
-    if (paired.length === 18) {
+    if (paired.length === cards_number) {
         let moves = parseInt(document.getElementById("moves").innerText);
         let oldRecord = parseInt(document.getElementById("record").innerText);
 
@@ -166,7 +167,7 @@ function winGame() {
             div.appendChild(p);
             recordCount();
         }
-    } else if (paired.length > 18) {
+    } else if (paired.length > cards_number) {
         alert(`Invalid number of paired cards`);
         throw `Invalid number of paired cards. Aborting!`;
     }
