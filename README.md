@@ -59,11 +59,11 @@
 The link can be founde here: <a href="https://marta10111.github.io/JS-Second-Project/" rel="nofollow"> https://marta10111.github.io/JS-Second-Project/
 ## **Content**
  - For idea how to start the project I use [Samuraj Programowania]((https://www.youtube.com/watch?v=gKUUHjEg7mQ&ab_channel=SamurajProgramowania)
-) channel on You tube
+ channel on You Tube
 
  - I used fonts from [Google Fonts](https://fonts.google.com/) for these project.
  -  Any code or problem solving issues was solved with the help of [Code Institute](https://learn.codeinstitute.net/login?next=/) and [w3school](https://www.w3schools.com/)
-  - For issue fixing i was using YouTube search on R3HAB MEDIA and Kevin Powell chanels.
+  - For issue fixing i was using YouTube search on R3HAB MEDIA and Kevin Powell channels.
   - Feedback and comments from reviever of my PP1 were taken into account for these project, when running tests and commiting into GitHub. Per their suggestion I was trying to write some more specific comments messages.
   -  Colleagues from Slack was also very helpfull, despite i didn't ask any question
 there, I finde a few felpfull topics and channells.
